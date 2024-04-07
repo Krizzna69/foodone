@@ -16,7 +16,7 @@ const StoreContextProvider = (props) => {
 
   useEffect(()=>{
     if(localStorage.getItem('token')){
-      fetch('http://localhost:4000/getcart',{
+      fetch('https://foodone-seven.vercel.app/getcart',{
         method:'POST',
         headers:{
           Accept:'application/form-data',
@@ -36,7 +36,7 @@ const StoreContextProvider = (props) => {
       setcartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
     if(localStorage.getItem('token')){
-      fetch('http://localhost:4000/addtocart',{
+      fetch('https://foodone-seven.vercel.app/addtocart',{
         method:'POST',
         headers:{
           Accept:'application/form-data',
@@ -54,7 +54,7 @@ const StoreContextProvider = (props) => {
   const removefromCart = (itemId) => {
     setcartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if(localStorage.getItem('token')){
-      fetch('http://localhost:4000/removefrom',{
+      fetch('https://foodone-seven.vercel.app/removefrom',{
         method:'POST',
         headers:{
           Accept:'application/form-data',
