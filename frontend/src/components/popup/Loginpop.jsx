@@ -17,7 +17,7 @@ const Loginpop = () => {
     const login = async () =>{
         console.log("Login lol",formdata);
         let responseData;
-        await fetch('https://foodone-seven.vercel.app/login',{
+        await fetch('https://foodone.onrender.com/login',{
             method:'POST',
             headers:{
                 Accept:'application/form-data',
@@ -42,7 +42,7 @@ const Loginpop = () => {
     const signup = async () =>{
         console.log("Signup",formdata);
         let responseData;
-        await fetch('https://foodone-seven.vercel.app/signup',{
+        await fetch('https://foodone.onrender.com/signup',{
             method:'POST',
             headers:{
                 Accept:'application/form-data',
